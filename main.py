@@ -32,7 +32,7 @@ def get_user_choice():
     Ask the user if they want to encrypt or decrypt any message.
     """
 
-    While True:
+    while True:
         choice = input("Do you want to (E)ncrypr or (D)ecrypt a message? (Q to Quit): ").strip().lower()
         if choice in ['e', 'd', 'q']:
             return choice
