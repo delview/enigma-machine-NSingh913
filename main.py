@@ -84,5 +84,7 @@ def main()
         # Display the results
         print("Result:", result)
 
-
+# Run the program
+if __name__ == "__main__":
+    main()
  
