@@ -56,5 +56,33 @@ def get_shift_value():
             print("Please enter a valid integer. ")
 
 # Create a main function to run the program.
+def main()
+
+    """
+    Runs the enigma machine program.
+    """
+
+    while True:
+        # Ask the user for their choice
+        choice = get_user_choice()
+        if choice == 'q':
+            print("Goodbye! ")
+            break
+
+        # Get the messgae from the user 
+        message = input("Enter your message: ").strip()
+
+        # Get the shift value
+        shift = get_shift_value()
+
+        # Determine whether to encrypt or decrypt
+        encrypt = choice == 'e'
+
+        # Encrypt or decrypt the message
+        result = caeser_cipher(message, shift, encrypt)
+
+        # Display the results
+        print("Result:", result)
+
 
  
