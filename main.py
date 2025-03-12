@@ -14,6 +14,16 @@ def ceaser_cipher(text, shift, encrypt=True):
     if not encrypt:
         shift = - shift 
 
+    # Loop through each character in the text.
+    for char in text:
+        if char.isalpha(): # this shift letters.
+            shift_base = ord('A') if char.isupper() else ord('a')
+            new_char = chr((ord(char) - shift_base + shift) % 26 + shift_base )
+        else:
+            
+
+
+
 # Ask the user to input the message 
 
 # Ask the user do they want to encrypt or decrypt a message
