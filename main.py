@@ -20,13 +20,23 @@ def ceaser_cipher(text, shift, encrypt=True):
             shift_base = ord('A') if char.isupper() else ord('a')
             new_char = chr((ord(char) - shift_base + shift) % 26 + shift_base )
         else:
-            
+            new_char = char
+        result += new_char
 
+    return result
 
+# Function to ask the user do they want to encrypt or decrypt a message.
+def get_user_choice():
 
-# Ask the user to input the message 
+    """
+    Ask the user if they want to encrypt or decrypt any message.
+    """
 
-# Ask the user do they want to encrypt or decrypt a message
+    While True:
+        choice = input("Do you want to (E)ncrypr or (D)ecrypt a message? (Q to Quit): ").strip().lower()
+        if choice in ['e', 'd', 'q']:
+            return choice
+        print("Invalid choice. Enter E, D, or Q. ")
 
 # Ceate a function to encrypt a message
 
