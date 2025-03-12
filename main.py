@@ -56,7 +56,7 @@ def get_shift_value():
             print("Please enter a valid integer. ")
 
 # Create a main function to run the program.
-def main()
+def main():
 
     """
     Runs the enigma machine program.
