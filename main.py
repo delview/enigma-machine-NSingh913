@@ -38,8 +38,23 @@ def get_user_choice():
             return choice
         print("Invalid choice. Enter E, D, or Q. ")
 
-# Ceate a function to encrypt a message
+# Ceate a function to get a valid shift value from the user
+def get_shift_value():
+    
+    """
+    Gets a valid shift values (1-25) from the user.
+    """
 
-# Create a function to decrypt a message
+    while True:
+        try: 
+            shift = int(input("Enter shifts value (1-25): ").strip())
+            if 1 <= shift <=  25:
+                return shift
+            else:
+                print("Shift values must be between 1 and 25. ")
+        except ValueError:
+            print("Please enter a valid integer. ")
+
+# Create a main function to run the program.
 
  
