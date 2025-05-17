@@ -33,7 +33,7 @@ def get_user_choice():
     """
 
     while True:
-        choice = input("Do you want to (E)ncrypr or (D)ecrypt a message? (Q to Quit): ").strip().lower()
+        choice = input("Do you want to (E)ncrypt or (D)ecrypt a message? (Q to Quit): ").strip().lower()
         if choice in ['e', 'd', 'q']:
             return choice
         print("Invalid choice. Enter E, D, or Q. ")
@@ -66,7 +66,7 @@ def main():
         # Ask the user for their choice
         choice = get_user_choice()
         if choice == 'q':
-            print("Goodbye! ")
+            print(" Thank you for using Ceaser Cipher! ")
             break
 
         # Get the messgae from the user 
@@ -79,7 +79,7 @@ def main():
         encrypt = choice == 'e'
 
         # Encrypt or decrypt the message
-        result = caeser_cipher(message, shift, encrypt)
+        result = ceaser_cipher(message, shift, encrypt)
 
         # Display the results
         print("Result:", result)
